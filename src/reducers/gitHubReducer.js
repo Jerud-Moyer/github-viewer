@@ -1,14 +1,18 @@
 import {
   SET_USERNAME,
   SET_USER_INFO,
-  SET_LOADING
+  SET_LOADING,
+  SET_REPOS
+  
 } from '../actions/gitHubActions';
 
 
 const initialState = {
   username: '',
   userInfo: {},
-  loading: true
+  loading: true,
+  repos: [],
+  repoUrl: ''
 };
 
 export default function reducer(state = initialState, action) {
@@ -28,6 +32,12 @@ export default function reducer(state = initialState, action) {
         ...state,
         loading: action.payload
       };
+    case SET_REPOS:
+      return {
+        ...state,
+        repos: action.payload
+      };
+  
     default:
       return state;
   }

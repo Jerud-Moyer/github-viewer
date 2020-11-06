@@ -1,9 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  setUserInfo,
   setUsername,
-  fetchUser
+  fetchUser,
+  fetchRepos
 }
   from '../../actions/gitHubActions';
 
@@ -20,6 +20,7 @@ const Controls = () => {
   const handleSubmit = async(e) => {
     e.preventDefault();
     dispatch(fetchUser(username));
+    dispatch(fetchRepos(username));
       
   };
 

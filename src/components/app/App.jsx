@@ -1,6 +1,7 @@
 import React from 'react';
-import Controls from '../controls/Controls';
+import Home from '../display/Home';
+
 
 export default function App() {
-  return <Controls />;
+  return <Home />;
 }

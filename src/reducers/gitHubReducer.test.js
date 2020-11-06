@@ -1,4 +1,4 @@
-import { setUsername, setUserInfo } from '../actions/gitHubActions';
+import { setUsername, setUserInfo, setRepos } from '../actions/gitHubActions';
 import reducer from './gitHubReducer';
 
 describe('gitHub reducer', () => {
@@ -45,6 +45,30 @@ describe('gitHub reducer', () => {
         profileLink: 'https://github.com/jerud-moyer'
       },
       loading: true
+    });
+  });
+
+  it('handles the SET_REPOS action', () => {
+    const state = { 
+      repos: {},
+      loading: true
+    };
+
+    const action = setRepos(
+      {
+        repoName: 'rock-paper-scissors',
+        reoUrl: 'github.com',
+      }
+    );
+
+    const newState = reducer(state, action);
+
+    expect(newState).toEqual({
+      loading: true,
+      repos: {
+        repoName: 'rock-paper-scissors',
+        reoUrl: 'github.com',
+      }
     });
   });
 });
