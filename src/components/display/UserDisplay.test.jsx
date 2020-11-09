@@ -1,14 +1,14 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
-import App from './App';
+import UserDisplay from './UserDisplay';
 import { Provider } from 'react-redux';
 import store from '../../store';
 
-describe('App component', () => {
+describe('UserDisplay component', () => {
   afterEach(() => cleanup());
-  it('renders App', () => {
+  it('renders UserDisplay', () => {
     const { asFragment } = render(<Provider store={store}>
-      <App />
+      <UserDisplay />
     </Provider>);
     expect(asFragment()).toMatchSnapshot();
   });

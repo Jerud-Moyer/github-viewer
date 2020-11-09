@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserDisplay component renders UserDisplay 1`] = `
+<DocumentFragment>
+  <div>
+    <h1 />
+    <img />
+    <h3>
+      followers: 
+    </h3>
+    <h3>
+      following: 
+    </h3>
+    <a>
+      Profile
+    </a>
+  </div>
+</DocumentFragment>
+`;
